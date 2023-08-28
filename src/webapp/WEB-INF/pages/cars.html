@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Coast</th>
+        <th scope="col">Name</th>
+        <th scope="col">Speed</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car: ${cars}">
+        <td th:text="${car.getCoast()}"/>
+        <td th:text="${car.getName()}"/>
+        <td th:text="${car.getSpeed()}"/>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
